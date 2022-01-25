@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Simpson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+            font-family: var(--andanapro);
+            text-transform: uppercase;
+            color: var(--blau);
+        }
+        :root{
+            --blau: #14213d;
+            --groc: #fca311;
+            --gris: #e5e5e5;
+            --blue: #0084ff;
+            --opensans: 'Open Sans', sans-serif;
+            --andanapro: 'Andada Pro', serif;
+            --negrita: 700;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        body>header{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 50px 0;
+            text-align: center;
+            justify-content: space-between;
+            height: 100vh;
+            width: 100%;
+            background-color: var(--groc);
+        }
+        header .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        h1{
+            font-size: 3.5em;
+            font-family: var(--opensans);
+            font-weight: var(--negrita);
+            color: white;
+        }
+        h2{
+            font-size: 2em;
+            font-family: var(--andanapro);
+            color: white;
+        }
+        h3{
+            font-family: var(--opensans);
+        }
+        nav a{
+            font-size: 0.75em;
+        }
+        section:first-child{
+            height: 100%;
+            background-color: var(--blue);
+            color: white;
+        }
+        section:first-child .container{
+            display: flex;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 250px;
+            height: 300px;
+            max-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: var(--groc);
+        }
+        .cover .cover_img{
+            width:100%;
+            max-height:200px;
+            background: coral;
+            flex-grow: 1;
+        }
+        .cover .cover_img img{        
+            object-fit: cover;    
+            flex-grow: 1;
+        }
+        .cover header{
+            background-color: yellow;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .cover h3{
+            font-family: var(--andanapro);
+            font-size: 0.75em;
+            color: var(--blau);
+        }
+        /*CARD DISSENYADORS*/
+        .container{
+        display: flex;
+        align-items: center;
+        }
+        .card_dissenyadors{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            align-items: center;
+            width: 300px;
+            box-shadow: var(--blau) 0px 0px 15px;
+        }
+        .dissenyadors_img{
+            width: 250px;
+            height: 250px;
+        }
+        .dissenyadors_img img{
+            border-radius: 250px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card_dissenyadors header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+        }
+
+        section:last-child{
+            height: 100%;
+            background-color: var(--gris);
+            color: var(--blau);
+        }
+        footer{
+            height: 50vh;
+            background-color: var(--groc);
+            color: white;
+        }
+        footer .container{
+            display: flex;
+        }
+        footer p{
+            width: 17%;
+            background-color:yellow;
+        }
+        footer p:last-child{
+            margin-left: 34%;
+            background-color: var(--gris);
+        }
+
+        footer p a{
+            font-family: var(--opensans);
+            text-transform: capitalize;
+            font-size: 0.75em;
+        }
+
+        .container{
+            display: flex;
+        }
+        /* @media (max-width:550px){
+            html{
+                font-size:20px;
+            }
+            h1{
+                color:green;
+            }
+            section:first-child .container{
+                flex-direction: column;
+            }
+            .cover{
+                display: flex;
+                align-items: center;
+                width: 500px;
+                height: 450px;
+                background-color: crimson;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .cover_img{
+                padding: 0;
+                width: 100%;
+                height: 300px;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: darkgoldenrod;
+            }
+            .cover_img img{
+                height: 250px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .cover header{
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+            .cover header h3{
+                font-size: 1.5em;
+                text-align: center;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>Los Simpson</h1>
+                <h2>"Col·lecció gràfica de los personajes de la serie televisiba los Simpson"</h2>
+            </hgroup>
+            <nav>
+                <a href="#Principales">Principales</a>
+                <a href="#secundarios">Secundarios</a>
+                <a href="#Extras">Extras</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section id="#Principales">
+                <h3>Principales</h3>
+                <div class="container">
+                    <div class="cover">
+                    <div class="cover_img">
+                        <img src="img/homer.png" alt="">
+                    </div>
+                    <header>
+                            <h3>Homer</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/march.png" alt="">
+                        </div>
+                        <header>
+                            <h3>Marge</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/bart.png" alt="">
+                        </div>
+                        <header>
+                            <h3>Bart</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/lisa.png" alt="">
+                        </div>
+                        <header>
+                            <h3>Lisa</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/magi.png" alt="">
+                        </div>
+                        <header>
+                            <h3>Magi</h3>
+                        </header>
+                    </div>
+                </div>
+            </section>
+            <section id="#secundarios">
+                <h3>Secundarios</h3>
+                <div class="container">
+                    <div class="card_dissenyadors">
+                        <div class="dissenyadors_img">
+                            <img src="img/6Barni.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Barni</h3>
+                            <blockquote>
+                                “Borracho del pueblo”
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_dissenyadors">
+                        <div class="dissenyadors_img">
+                            <img src="img/7Cletus.gif" alt="">
+                        </div>
+                        <header>
+                            <h3>Cletus</h3>
+                            <blockquote>
+                                “El tonto” 
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_dissenyadors">
+                        <div class="dissenyadors_img">
+                            <img src="img/14Wiggum.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Wiggum</h3>
+                            <blockquote>
+                                “Policía poco profesional"
+                            </blockquote>
+                        </header>
+                    </div>
+                </div>
+            </section>
+        
+    </main>
+    <footer id="#Extras">
+            <h3>Extras</h3>
+            <div class="container">
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">E-mail</a></p>
+            </div>
+    </footer>
+</body>
+</html>
